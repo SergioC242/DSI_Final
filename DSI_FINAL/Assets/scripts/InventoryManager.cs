@@ -34,6 +34,20 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
+    // Devuelve una copia del inventario actual
+    public int[] GetInventory()
+    {
+        return (int[])inventory.Clone();
+    }
+
+    // Devuelve el ítem en una posición específica
+    public int GetItemAt(int index)
+    {
+        if (index < 0 || index >= inventory.Length)
+            return 0;
+        return inventory[index];
+    }
+
     // Verifica si existe una combinación y la consume si es posible
     public bool UseCombination(Dictionary<int, int> requiredItems)
     {
