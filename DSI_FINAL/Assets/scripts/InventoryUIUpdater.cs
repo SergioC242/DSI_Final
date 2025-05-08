@@ -9,11 +9,6 @@ public class InventoryUIUpdater : MonoBehaviour
 
     private void Start()
     {
-        inventoryManager.AddItem(1);
-        inventoryManager.AddItem(2);
-        inventoryManager.AddItem(4);
-        inventoryManager.AddItem(1);
-        inventoryManager.PrintInventory();
         ChangeUI();
     }
     private void OnEnable()
