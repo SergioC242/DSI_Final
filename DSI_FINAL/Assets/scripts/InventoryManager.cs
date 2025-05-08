@@ -49,41 +49,37 @@ public class InventoryManager : MonoBehaviour
     }
 
     // Verifica si existe una combinación y la consume si es posible
-    public bool UseCombination(Dictionary<int, int> requiredItems)
+    public bool ConsumeItems(int item1, int item2)
     {
-        // Contar los ítems actuales
-        Dictionary<int, int> itemCounts = new Dictionary<int, int>();
-        foreach (int item in inventory)
-        {
-            if (item == 0) continue;
-            if (!itemCounts.ContainsKey(item))
-                itemCounts[item] = 0;
-            itemCounts[item]++;
-        }
+        int firstIndex = -1;
+        int secondIndex = -1;
+        Debug.Log("entro"); Debug.Log("entro"); Debug.Log("entro");
 
-        // Verifica si hay suficientes
-        foreach (var pair in requiredItems)
+        // First, find two different indices that match the required items
+        int i = 0;
+        while( i < inventory.Length && (firstIndex == -1 || secondIndex == -1))
         {
-            if (!itemCounts.ContainsKey(pair.Key) || itemCounts[pair.Key] < pair.Value)
-                return false;
-        }
-
-        // Elimina los ítems requeridos
-        Dictionary<int, int> toRemove = new Dictionary<int, int>(requiredItems);
-        for (int i = 0; i < inventory.Length; i++)
-        {
-            int current = inventory[i];
-            if (toRemove.ContainsKey(current) && toRemove[current] > 0)
+            if (inventory[i] == item1 && firstIndex == -1)
             {
-                inventory[i] = 0;
-                toRemove[current]--;
+                firstIndex = i;
+            }
+            else if (inventory[i] == item2 && secondIndex == -1)
+            {
+                secondIndex = i;
+                
             }
         }
 
-        // Compactar inventario: mover a la izquierda
-        CompactInventory();
+        // If both items were found in different positions
+        if (firstIndex != -1 && secondIndex != -1)
+        {
+            inventory[firstIndex] = 0;
+            inventory[secondIndex] = 0;
+            //CompactInventory();
+            return true;
+        }
 
-        return true;
+        return false;
     }
 
     // Mueve todos los ítems hacia la izquierda para eliminar huecos

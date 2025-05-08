@@ -16,7 +16,7 @@ public class InventoryUIUpdater : MonoBehaviour
         inventoryManager.PrintInventory();
         ChangeUI();
     }
-    private void ChangeUI()
+    public void ChangeUI()
     {
         var uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;
