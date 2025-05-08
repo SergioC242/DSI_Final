@@ -16,6 +16,10 @@ public class InventoryUIUpdater : MonoBehaviour
         inventoryManager.PrintInventory();
         ChangeUI();
     }
+    private void OnEnable()
+    {
+        ChangeUI();
+    }
     public void ChangeUI()
     {
         var uiDocument = GetComponent<UIDocument>();
