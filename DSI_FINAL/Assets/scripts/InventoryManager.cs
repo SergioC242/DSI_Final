@@ -53,11 +53,10 @@ public class InventoryManager : MonoBehaviour
     {
         int firstIndex = -1;
         int secondIndex = -1;
-        Debug.Log("entro"); Debug.Log("entro"); Debug.Log("entro");
 
         // First, find two different indices that match the required items
         int i = 0;
-        while( i < inventory.Length && (firstIndex == -1 || secondIndex == -1))
+        while( i < inventory.Length && !(firstIndex != -1 && secondIndex != -1))
         {
             if (inventory[i] == item1 && firstIndex == -1)
             {
@@ -68,6 +67,7 @@ public class InventoryManager : MonoBehaviour
                 secondIndex = i;
                 
             }
+            i++;
         }
 
         // If both items were found in different positions
@@ -75,7 +75,7 @@ public class InventoryManager : MonoBehaviour
         {
             inventory[firstIndex] = 0;
             inventory[secondIndex] = 0;
-            //CompactInventory();
+            CompactInventory();
             return true;
         }
 

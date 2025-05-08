@@ -13,11 +13,21 @@
         <engine:VisualElement name="Item_2" style="flex-grow: 1; background-color: rgb(255, 255, 255); width: auto; height: 25%; min-height: 25%; max-height: 25%; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 5%; margin-right: 5%; margin-bottom: 5%; margin-left: 5%; flex-direction: row;">
             <engine:VisualElement style="flex-grow: 1; width: 30%; min-width: 30%; max-width: 300%; background-color: rgb(178, 178, 178); background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=5923138177525885446&amp;guid=ae22959c034317d44a00faf899c58a5a&amp;type=3#Remove@2x&quot;);" />
             <engine:VisualElement style="flex-grow: 1; width: 30%; min-width: 30%; max-width: 300%; background-color: rgb(178, 178, 178);">
-                <engine:VisualElement style="flex-grow: 1; background-image: resource(&apos;item_1&apos;);" />
-                <engine:VisualElement style="flex-grow: 1; background-image: resource(&apos;item_1&apos;);" />
+                <engine:VisualElement style="flex-grow: 1; background-image: resource(&apos;item_2&apos;);" />
+                <engine:VisualElement style="flex-grow: 1; background-image: resource(&apos;item_3&apos;);" />
             </engine:VisualElement>
             <engine:VisualElement name="VisualElement" style="flex-grow: 1; width: 30%; min-width: 30%; max-width: 300%; background-color: rgb(178, 178, 178); background-image: none;">
                 <engine:Button text="Craft&#10;" name="Craft2" style="-unity-text-align: middle-center; white-space: nowrap; right: auto; left: auto; bottom: auto; top: 30%;" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="Item_3" style="flex-grow: 1; background-color: rgb(255, 255, 255); width: auto; height: 25%; min-height: 25%; max-height: 25%; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 5%; margin-right: 5%; margin-bottom: 5%; margin-left: 5%; flex-direction: row;">
+            <engine:VisualElement style="flex-grow: 1; width: 30%; min-width: 30%; max-width: 300%; background-color: rgb(178, 178, 178); background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=5923138177525885446&amp;guid=ae22959c034317d44a00faf899c58a5a&amp;type=3#Remove@2x&quot;);" />
+            <engine:VisualElement style="flex-grow: 1; width: 30%; min-width: 30%; max-width: 300%; background-color: rgb(178, 178, 178);">
+                <engine:VisualElement style="flex-grow: 1; background-image: resource(&apos;item_4&apos;);" />
+                <engine:VisualElement style="flex-grow: 1; background-image: resource(&apos;item_3&apos;);" />
+            </engine:VisualElement>
+            <engine:VisualElement name="VisualElement" style="flex-grow: 1; width: 30%; min-width: 30%; max-width: 300%; background-color: rgb(178, 178, 178); background-image: none;">
+                <engine:Button text="Craft&#10;" name="Craft3" style="-unity-text-align: middle-center; white-space: nowrap; right: auto; left: auto; bottom: auto; top: 30%;" />
             </engine:VisualElement>
         </engine:VisualElement>
     </engine:VisualElement>

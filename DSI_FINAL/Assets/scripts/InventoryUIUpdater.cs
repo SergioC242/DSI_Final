@@ -7,7 +7,7 @@ public class InventoryUIUpdater : MonoBehaviour
     public InventoryManager inventoryManager;
     private VisualElement root;
 
-    private void Awake()
+    private void Start()
     {
         inventoryManager.AddItem(1);
         inventoryManager.AddItem(2);

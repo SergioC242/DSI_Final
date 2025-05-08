@@ -5,6 +5,7 @@ public class CraftingManager : MonoBehaviour
 {
     private Button craftButton1;
     private Button craftButton2;
+    private Button craftButton3;
     public InventoryManager inventoryManager;
     public InventoryUIUpdater inventoryUIUpdater;
 
@@ -16,16 +17,16 @@ public class CraftingManager : MonoBehaviour
         // Buscar los botones por nombre
         craftButton1 = root.Q<Button>("Craft1");
         craftButton2 = root.Q<Button>("Craft2");
+        craftButton3 = root.Q<Button>("Craft3");
 
         // Asignar eventos de clic
         if (craftButton1 != null)
         {
             craftButton1.clicked += () =>
             {
-                Debug.Log("entro");
+                Debug.Log("Se pulsó el botón Craft1 (corresponde a Item_1)");
                 if (inventoryManager.ConsumeItems(1, 1))
                 {
-                    Debug.Log("Se pulsó el botón Craft1 (corresponde a Item_1)");
                     inventoryUIUpdater.ChangeUI();
                 }
 
@@ -36,8 +37,23 @@ public class CraftingManager : MonoBehaviour
         {
             craftButton2.clicked += () =>
             {
-                Debug.Log("Se pulsó el botón Craft2 (corresponde a Item_2)");
-                // Aquí va la lógica de crafteo para el Item_2
+                Debug.Log("Se pulsó el botón Craft1 (corresponde a Item_2)");
+                if (inventoryManager.ConsumeItems(2, 3))
+                {
+                    inventoryUIUpdater.ChangeUI();
+                }
+            };
+        }
+
+        if (craftButton3 != null)
+        {
+            craftButton3.clicked += () =>
+            {
+                Debug.Log("Se pulsó el botón Craft1 (corresponde a Item_3)");
+                if (inventoryManager.ConsumeItems(3, 4))
+                {
+                    inventoryUIUpdater.ChangeUI();
+                }
             };
         }
     }
